@@ -29,10 +29,12 @@ $ kubectl get vmis -o yaml testvm
 Now that a VM is running you can access it's console:
 ```
 # Connect to the serial console
+# NOTE: YOU WILL NOT BE ABLE TO ESCAPE THE CONSOLE ON KATACODA
 $ ./virtctl console testvm
 
 # Connect to the graphical display
 # It Requires remote-viewer from the virt-viewer package.
+# This obviously does not work on katacoda
 $ ./virtctl vnc testvm
 ```
 
