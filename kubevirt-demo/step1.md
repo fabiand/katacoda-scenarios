@@ -11,7 +11,9 @@ Provide some initial configuration
 And finally deploy KubeVirt
 
 `kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/v0.10.0/kubevirt.yaml`{{execute}}
-```
+
+Now let's wait until the API server is ready:
+`kubectl wait -n kube-system --for condition=ready pod -l kubevirt.io=virt-api`{{execute}}
 
 
 `virtctl` is a client utility to provide some more convenient ways to interact with the VM:
