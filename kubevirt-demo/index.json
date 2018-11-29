@@ -8,8 +8,7 @@
     "steps": [
       {
         "title": "Launch cluster and deploy KubeVirt",
-        "text": "step1.md",
-        "verify": "verify-step1.sh"
+        "text": "step1.md"
       },
       {
         "title": "Create and use your first VM",
