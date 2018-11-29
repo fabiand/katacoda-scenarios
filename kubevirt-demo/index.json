@@ -1,19 +1,18 @@
 {
+  "pathwayTitle": "KubeVirt",
   "title": "KubeVirt Demo",
-  "description": "TBD",
+  "description": "Deploy and use KubeVirt in a hosted sandboxed interactive environment",
+  "time": "5min",
+  "difficulty": "beginner",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Launch cluster and deploy KubeVirt",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Create and use your first VM",
         "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
       }
     ],
     "intro": {
