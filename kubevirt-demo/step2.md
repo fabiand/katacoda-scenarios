@@ -1,29 +1,32 @@
 #### Deploy a VM
 
-```
-# Creating a virtual machine
-$ kubectl apply -f https://raw.githubusercontent.com/kubevirt/demo/master/manifests/vm.yaml
+Start of by creating a virtual machine:
 
-# After deployment you can manage VMs using the usual verbs:
+`kubectl apply -f https://raw.githubusercontent.com/kubevirt/demo/master/manifests/vm.yaml`{{execute}}
+
+After it has been created you can manage VMs using the usual verbs:
+
+```
 $ kubectl get vms
 $ kubectl get vms -o yaml testvm
+```
 
-# To start a VM you can use
-$ ./virtctl start testvm
+To start a VM, virtctl can be used:
 
-# Afterwards you can inspect the instances
+`./virtctl start testvm`{{execute}}
+
+Alternatively you can use `kubectl edit vm testvm` to set `.spec.running: true`.
+
+Once the VM is running you can inspect it's instance:
+
+```
 $ kubectl get vmis
 $ kubectl get vmis -o yaml testvm
-
-# To shut it down again
-$ ./virtctl stop testvm
-
-# To delete
-$ kubectl delete vms testvm
 ```
 
 #### Accessing VMs (serial console & vnc)
 
+Now that a VM is running you can access it's console:
 ```
 # Connect to the serial console
 $ ./virtctl console testvm
@@ -32,3 +35,19 @@ $ ./virtctl console testvm
 # It Requires remote-viewer from the virt-viewer package.
 $ ./virtctl vnc testvm
 ```
+
+#### Shutdown and cleanup
+
+Shutting down a VM works by either using `virtctl` or editing the VM.
+
+```
+$ ./virtctl stop testvm
+```
+
+Finally, the VM can be deleted using:
+
+```
+$ kubectl delete vms testvm
+```
+
+
