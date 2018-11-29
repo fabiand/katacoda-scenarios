@@ -1,3 +1,11 @@
+### Wait for the cluster to be ready
+
+Before we can startm, we need to wait for the Kubernetes cluster to be ready
+
+`launch.sh`{{execute}}
+
+Now we are ready to continue.
+
 #### Deploy KubeVirt
 
 Provide some initial configuration
