@@ -1,7 +1,3 @@
-#### Start the cluster
-
-`launch.sh`{{execute}}
-
 #### Deploy KubeVirt
 
 Provide some initial configuration
