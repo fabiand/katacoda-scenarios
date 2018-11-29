@@ -9,7 +9,7 @@
       {
         "title": "Launch cluster and deploy KubeVirt",
         "text": "step1.md",
-        "verify": "test -x virtctl"
+        "verify": "verify-step1.sh"
       },
       {
         "title": "Create and use your first VM",
